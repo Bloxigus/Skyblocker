@@ -175,7 +175,7 @@ dependencies {
 	// Hypixel Mod API Library
 	implementation 'net.hypixel:mod-api:1.0.1'
 	// Hypixel Mod API Mod (from modrinth because the one from hypixel doesnt have the implementations)
-	runtimeOnly "maven.modrinth:hypixel-mod-api:1.0.1+build.1+mc1.21"
+	modRuntimeOnly "maven.modrinth:hypixel-mod-api:1.0.1+build.1+mc1.21"
 
 	// Mod Menu
 	modImplementation "com.terraformersmc:modmenu:${project.mod_menu_version}"
