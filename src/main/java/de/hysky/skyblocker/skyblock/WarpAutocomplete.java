@@ -12,12 +12,12 @@ import com.mojang.serialization.JsonOps;
 
 import de.hysky.skyblocker.utils.CodecUtils;
 import de.hysky.skyblocker.utils.Http;
+import de.hysky.skyblocker.utils.RankUtils;
 import de.hysky.skyblocker.utils.Utils;
 import it.unimi.dsi.fastutil.objects.Object2BooleanMap;
 import it.unimi.dsi.fastutil.objects.Object2BooleanMaps;
-import net.azureaaron.hmapi.data.rank.PackageRank;
-import net.azureaaron.hmapi.data.rank.RankType;
 import net.fabricmc.fabric.api.client.command.v2.FabricClientCommandSource;
+import net.hypixel.data.rank.PackageRank;
 import net.minecraft.command.CommandSource;
 import org.jetbrains.annotations.Nullable;
 import org.slf4j.Logger;
@@ -108,6 +108,6 @@ public class WarpAutocomplete {
 	}
 
 	private static boolean shouldShowWarp(Object2BooleanMap.Entry<String> entry) {
-		return !entry.getBooleanValue() || Utils.isOnBingo() || RankType.compare(Utils.getRank(), PackageRank.MVP_PLUS) >= 0;
+		return !entry.getBooleanValue() || Utils.isOnBingo() || RankUtils.rankCompare(Utils.getRank(), PackageRank.MVP_PLUS);
 	}
 }

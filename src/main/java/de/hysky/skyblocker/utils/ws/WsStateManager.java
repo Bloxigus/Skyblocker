@@ -4,8 +4,8 @@ import de.hysky.skyblocker.annotations.Init;
 import de.hysky.skyblocker.events.SkyblockEvents;
 import de.hysky.skyblocker.utils.Utils;
 import de.hysky.skyblocker.utils.ws.message.Message;
-import net.azureaaron.hmapi.data.server.Environment;
 import net.fabricmc.fabric.api.client.networking.v1.ClientPlayConnectionEvents;
+import net.hypixel.data.region.Environment;
 
 import java.util.EnumSet;
 import java.util.Optional;
